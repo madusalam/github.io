@@ -1,0 +1,35 @@
+.fox:hover .hat {
+  animation-name: tip;                /* animation name */
+  animation-duration: 2s;             /* how long it lasts */
+  animation-delay: 0s;                /* dely before starting */
+  animation-iteration-count: 3;       /* how many times to play it */
+  animation-timing-function: linear;  /* easing style */
+  animation-fill-mode: backwards;     /* apply beginning or end styles when it's over */
+  animation-direction: normal;        /* direction it plays in */
+}
+
+.hat {
+  transform-origin: center;     /* trasformations are applied from these cooridnates on the hat */
+}
+
+/* 
+These are the keyframes in the hat tip animation.
+Each keyframe includes a percentage and any number of css rules.
+*/
+
+@keyframes tip {
+  0% {
+    /* You can add more rules to each keyframe */
+  }
+  25% {
+    transform: translateY(-100px) rotate(10deg);
+  }
+  50% {
+    transform: translateY(-100px) rotateX(360deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+
+/* You can 
